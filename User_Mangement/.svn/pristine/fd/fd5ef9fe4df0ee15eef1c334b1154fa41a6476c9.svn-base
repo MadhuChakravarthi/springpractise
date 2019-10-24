@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> 
+<![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" lang="en"> 
+<![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <title>e-Cabinet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="templatemo">
+    <!-- 
+    Compass Template
+    http://www.templatemo.com/tm-454-compass
+    -->
+    <meta charset="UTF-8">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+    <!-- CSS Bootstrap & Custom -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/templatemo-misc.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/templatemo-main.css">
+        
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    
+    <!-- JavaScripts -->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/modernizr.js"></script>
+
+    <script type="text/javascript">
+        function CallLogin() {
+           window.location.href  = "login/index.html";
+        }
+
+    </script>
+    <!--[if lt IE 8]>
+	<div style=' clear: both; text-align:center; position: relative;'>
+            <a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" alt="" /></a>
+        </div>
+    <![endif]-->
+    <style>
+	.title-section{
+		margin-top:30px;	
+	}
+	</style>
+</head>
+<body>
+    
+    <div id="home">
+        <div class="site-header">
+            <div class="top-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="left-header">
+                                <span><i class="fa fa-phone"></i>040-66223344</span>
+                                <span><i class="fa fa-envelope"></i>apecabinet@gmail.com</span>
+                            </div> <!-- /.left-header -->
+                        </div> <!-- /.col-md-6 -->
+                        <div class="col-md-6 col-sm-6">
+                            <div class="right-header text-right">
+                                <ul class="social-icons">
+                                    <li><a href="#" class="fa fa-facebook"></a></li>
+                                    <li><a href="#" class="fa fa-instagram"></a></li>
+                                    <li><a href="#" class="fa fa-twitter"></a></li>
+                                    <li><a href="#" class="fa fa-google-plus"></a></li>
+                                </ul>
+                            </div> <!-- /.left-header -->
+                        </div> <!-- /.col-md-6 -->
+                    </div> <!-- /.row -->
+                </div> <!-- /.container -->
+            </div> <!-- /.top-header -->
+            <div class="main-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 col-xs-6">
+                            <div class="">
+                                <h1><font size="15">&nbsp;&nbsp; </font>
+								<font color="#EC971F" style="font-size: 40pt">
+								<img border="0" src="images/Untitled-1.png" width="202" height="50"></font></h1>
+                            </div> <!-- /.logo -->
+                        </div> <!-- /.col-md-4 -->
+                        <div class="col-md-8 col-sm-8 col-xs-6">
+                            <div class="menu text-right hidden-sm hidden-xs">
+                                <ul>
+                                    <li><a href="#home">Home</a></li>
+                                    <li><a href="#services">Services</a></li>
+                                    <li><a href="#portfolio">Ministers</a></li>
+                                    <li><a href="#about">About</a></li>
+                                    <li><a href="#contact">Contact</a></li>
+                                    <li><a onClick ="CallLogin();" href="#">LOGIN</a></li>
+                                </ul>
+                            </div> <!-- /.menu -->
+                        </div> <!-- /.col-md-8 -->
+                    </div> <!-- /.row -->
+                    <div class="responsive-menu text-right visible-xs visible-sm">
+                        <a href="#" class="toggle-menu fa fa-bars"></a>
+                        <div class="menu">
+                            <ul>
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#services">Services</a></li>
+                                <li><a href="#portfolio">Portfolio</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                                <li><a onClick ="CallLogin();" href="#" class="external">
+								LOGIN</a></li>
+                            </ul>
+                        </div> <!-- /.menu -->
+                    </div>
+                </div>
+			
+        </div> <!-- /.site-header -->
+    </div> <!-- /#home -->
+
+    <div class="flexslider">
+        <ul class="slides">
+            <li>
+                <img src="images/meeting_1.jpg" alt="">
+                <div class="flex-caption">
+                    <h2><font color="#FFFF00">Andhra Pradesh e Cabinet</font></h2>
+                </div>
+            </li>
+            <li>
+                <img src="images/meeting_2.jpg" alt=""></li>
+        </ul>
+		<div class="container">
+			
+			
+            <div class="row"><br>
+				<div class="col-sm-8">
+                <div class="title-section text-center">
+                <h2>About Us</h2>
+                </div>
+					<p>The main objective of e Cabinet System is to automate the process of convening the Cabinet meetings through online system. The system facilitates end-to-end digital integration of e-Cabinet with e-Office. The following are the various stake holders in the e Cabinet System, Honble Chief Ministers Office, All the Honble Ministers, Cabinet Ministers, Chief Secretarys Office, 
+					Secretary, General Administrative Department<br><br>&nbsp;</p>
+				</div> <!-- /.col-md-3 -->
+              <div class="col-sm-4" style="border:1px solid #ddd; border-radius:3px; padding:0 15px 15px 15px;">
+                <div class="title-section text-center" >
+                <h2>Notifications</h2>
+                </div>
+				  <marquee direction="up" scrollamount="2">
+                  <p > <img src="images/new.png" width="38" height="15"> The main objective of e Cabinet System is to automate</p>
+                    
+                  <p>The main objective of e Cabinet System is to automate</p>
+                  <p>The main objective of e Cabinet System is to automate</p>
+                  <p>The main objective of e Cabinet System is to automate</p></marquee>
+				</div> 
+                <!-- /.col-md-3 -->
+				<!-- /.col-md-3 -->
+            </div> <!-- /.row -->
+            <div class="row">
+				<!-- /.our-team -->
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+    </div> <!-- /#about -->
+
+    <div id="contact" class="section-cotent">
+        <div class="container">
+            <div class="title-section text-center">
+                <h2>Contact Us</h2><span></span>
+            </div> <!-- /.title-section -->
+            <div class="row">
+				<div class="col-sm-6">
+					<h4 class="widget-title">Send a message to us</h4>
+					<div class="contact-form">
+						<p class="full-row"><label for="name-id">Your Name:</label>
+						<input type="text" id="name-id" name="name-id"> </p>
+						<p class="full-row"><label for="email-id">Email:</label>
+						<input type="text" id="email-id" name="email-id"> </p>
+						<p class="full-row"><label for="subject-id">Subject:</label>
+						<input type="text" id="subject-id" name="subject-id">
+						</p>
+						<p class="full-row"><label for="message">Message:</label>
+						<textarea name="message" id="message" rows="6"></textarea>
+						</p>
+						<input class="mainBtn" type="submit" name="" value="Send Message">
+					</div></div> <!-- /.col-md-3 -->
+                <div class="col-sm-6">
+					<h4 class="widget-title">Our location</h4>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.06990419426!2d78.46889921440174!3d17.408432606780973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9a73ca555555%3A0x6f38da66f08b798d!2sA.P+Secretariat!5e0!3m2!1sen!2sin!4v1449720344508" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> <!-- /.map-holder -->
+                    <div class="contact-info">
+						<span><i class="fa fa-home"></i>Secretariate A-Block, Tank Bund, Hyderabad</span>
+						<span><i class="fa fa-phone"></i>040-66223344</span>
+						<span><i class="fa fa-envelope"></i>apecabinet.com</span>
+					</div></div> <!-- /.col-md-3 -->
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+    </div> <!-- /#contact -->
+
+    <div class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-8 col-xs-12">
+                    <p>Copyright &copy; 2015 e-cabinet ,Designed and Developed by National Informatics Centre. Andhra Pradesh</p>
+                </div> <!-- /.col-md-6 -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="go-top">
+                        <a href="#" id="go-top">
+                            <i class="fa fa-angle-up"></i>
+                            Back to Top
+                        </a>
+                    </div>
+                </div> <!-- /.col-md-6 -->
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+    </div> <!-- /.site-footer -->
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/jquery.lightbox.js"></script>
+    <script src="js/custom.js"></script>
+    <script type="text/javascript">
+
+        function initialize() {
+          var mapOptions = {
+			  scrollwheel: false,
+            zoom: 15,
+            center: new google.maps.LatLng(13.758468,100.567481)
+          };
+
+          var map = new google.maps.Map(document.getElementById('map-canvas'),
+              mapOptions);
+        }
+
+        function loadScript() {
+          var script = document.createElement('script');
+          script.type = 'text/javascript';
+          script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' +
+              'callback=initialize';
+          document.body.appendChild(script);
+        }
+
+        window.onload = loadScript;
+    </script>
+
+</body>
+</html>

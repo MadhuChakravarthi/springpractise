@@ -1,0 +1,214 @@
+
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>    
+
+
+<html>
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+ <script src="<c:url value="/resources/js/jquery.min.js"/>"></script>
+<script type="text/javascript">
+
+$(document).ready(function ($) {
+	
+	
+    $("#distcode").change(function () {
+        var str = "";
+		
+      
+        $("#distcode option:selected").each(function () {
+				str += $(this).val() + " ";
+			
+        });
+
+ 
+        if (str.length > 1)
+        {  
+        
+
+            $.ajax({
+                type: "POST",
+                url: "getDistrict?distcode="+str,
+                dataType: 'json',
+               
+                success: function (data, status)
+                {
+                	
+                    if (typeof (data.success) != 'undefined')
+                    {
+                    
+	
+                        $("#districtsr option").remove();
+                        $("#districtsr").append(
+                            "<option value=''>--select--</option>");
+                             
+
+                        for (var i = 0; i < data.district.length; i++) {
+
+								
+                            $("#districtsr").append(
+                                "<option value='" + data.district[i].sr_cd + "'>" + data.district[i].sr_name + "</option>"
+
+                                );
+                                    
+                        	}
+		
+							$("select").select2();
+					
+							}
+                    if (typeof (data.error) != 'undefined')
+                    {
+                        alert(data.error);
+                    }
+                },
+                error: function (data, status, e)
+                {
+                 alert('data1');
+                }
+				}, new function () {
+					})
+        }
+        else
+        {
+        alert(str);    
+
+
+
+        }
+ 
+    });
+
+
+});
+
+</script>
+
+
+</head>
+
+
+<style type="text/css">
+.style1{
+width:900px !important;
+}
+</style>
+<body>
+
+
+            <div class="container" style="margin:0 auto;width:500px">
+<form action="retrieveCardServiceDetails" method="POST"  > 
+                               
+  <div class="panel panel-primary">
+    <div class="panel-heading text-center">e-BhudharID </div>
+    <div class="panel-body">
+    <font color=red> ${msg}</font>
+    
+  <div class="row ">
+      <div class="col-sm-5">
+          <label>  Survey District </label>
+      </div>
+      <div class="col-sm-6">
+           
+           
+           <select name="distcode"  id="distcode"  style="text-transform: uppercase; font-size: 8pt; font-family: Verdana">
+           <option value="" selected="selected">-----------select--------</option>
+           <option value="12">ANANTAPUR</option>
+<option value="10"> CHITTOOR</option>
+<option value="11"> CUDDAPAH</option>
+<option value="04"> EAST GODAVARI</option>
+<option value="07"> GUNTUR</option>
+<option value="06"> KRISHNA</option>
+<option value="13"> KURNOOL</option>
+<option value="09"> NELLORE</option>
+<option value="08"> PRAKASAM</option>
+<option value="01"> SRIKAKULAM</option>
+<option value="03"> VISAKHAPATANAM</option>
+<option value="02"> VIZIANAGARAM</option>
+<option value="05"> WEST GODAVARI</option></select>
+      </div>
+  </div> <br>
+  <div class="row ">
+      <div class="col-sm-5">
+        <label>District Sub Registrar</label>
+      </div>
+      <div class="col-sm-6">
+      
+      <select name="districtsr" id="districtsr" style="text-transform: uppercase; font-size: 8pt; font-family: Verdana">
+        <option value="" selected="selected">-----------select--------</option>
+      </select>
+     
+      </div>
+  </div> <br>
+  
+  <div class="row ">
+      <div class="col-sm-5">
+        <label>Registration Year</label>
+      </div>
+      <div class="col-sm-6">
+        <select name="regyear" onchange="getDistDetails5(this)" style="text-transform: uppercase; font-size: 8pt; font-family: Verdana"><option value="" selected="selected">-----------select--------</option>
+                            
+<option value="2015"> 2015-16</option>
+<option value="2016"> 2016-17</option>
+
+
+</select>
+      </div>
+  </div> <br>
+  
+  <div class="row ">
+      <div class="col-sm-5">
+        <label>Document Number</label>
+      </div>
+      <div class="col-sm-6">
+        <input name="docnum" type="text"  autocomplete="off" autofocus class="form-control" style="width: 100%">
+      </div>
+  </div> <br>
+  
+  <div class="row">
+      <div class="col-sm-1 col-sm-offset-5">
+         <input class="buttoncss btn  btn-primary " style="width: 90px !important; border-color: #084884" type="submit" value="Get Details"/></div>
+          <div class="col-sm-4 col-sm-offset-2">
+         <input class="buttoncss btn btn-danger" style="width: 80px !important; border-color: #084884" type="reset" value="Reset"/>
+      </div>
+      </div><br>
+     
+
+    
+    
+
+    
+    </div>
+    
+  </div>
+  </div>
+  </form>
+  <form:form action="saveCardDetails" method="POST" commandName="BPMS_ServiceBean"> 
+  <div class="container style1">
+  <c:if test="${!empty BPMS_ServiceBean.detailsBean}" >
+  <table align=center width="60%"  class="table table-striped table-bordered" id="dataTables-example" style="font-size: 14px; color:#0064AC" >
+  <tr><td>SNo</td><td>Schedule No</td><td>Registration Date</td><td>Boundaries</td><td>Build Area</td><td>Checked Value</td></tr>
+  <c:forEach items="${BPMS_ServiceBean.detailsBean}" var="bhudhar" varStatus="test">
+  <tr><td>${test.count}</td><td>${bhudhar.schedule_no}</td><td>${bhudhar.registrationDate}</td><td>${bhudhar.north}/${bhudhar.south}/${bhudhar.east}/${bhudhar.west} </td>
+  <td>${bhudhar.buildarea}</td>
+  <form:hidden path="detailsBean[${test.index}].schedule_no" /> 
+  <form:hidden path="detailsBean[${test.index}].registrationDate" /> 
+  <form:hidden path="detailsBean[${test.index}].north" /> 
+  <form:hidden path="detailsBean[${test.index}].buildarea"  /> 
+  <td><form:checkbox path="detailsBean[${test.index}].checkeditem"  /> </td>
+  </tr>
+  </c:forEach> 
+  </c:if>
+  
+  </form:form>
+  
+   
+  </div>
+</table>
+<div class="row">
+      <div class="col-sm-1 col-sm-offset-5">
+         <input class="buttoncss  btn-green" style="width: 90px !important; border-color: #084884" type="submit"  value="Submit"/></div>
+         </div>
+</body>
+</html>

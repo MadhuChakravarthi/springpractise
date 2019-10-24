@@ -1,0 +1,13 @@
+package com.nic.projectproposal.service;
+
+
+import com.nic.projectproposal.model.PpGeneralDetails;
+
+
+public interface ProjectProposalService {
+
+	public void generalCreation(PpGeneralDetails user);
+	
+	
+	
+}

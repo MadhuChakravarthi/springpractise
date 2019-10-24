@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+    
+ 
+    <definition name="login1" extends="base-def1">
+       <put-attribute name="header" value="/WEB-INF/jsp/common/header.jsp"></put-attribute>
+        <put-attribute name="content" value="/WEB-INF/jsp/common/login1.jsp"></put-attribute>
+        <put-attribute name="footer" value="/WEB-INF/jsp/common/footer.jsp"></put-attribute>
+    </definition>
+    
+    
+   
+    <definition name="general" extends="base-def1">
+       
+         <put-attribute name="left" value="/WEB-INF/jsp/common/leftMenu.jsp"></put-attribute>
+        <put-attribute name="content" value="/WEB-INF/jsp/projectproposal/generaldetails.jsp"></put-attribute>
+        
+    </definition>
+    
+    
+    
+    
+    <definition name="category" extends="base-def1">
+       
+        <put-attribute name="left" value="/WEB-INF/jsp/common/leftMenu.jsp"></put-attribute>
+        <put-attribute name="content" value="/WEB-INF/jsp/projectproposal/categorydetails.jsp"></put-attribute>
+        
+    </definition>
+    
+    
+    <definition name="welfare" extends="base-def1">
+        <put-attribute name="left" value="/WEB-INF/jsp/common/leftMenu.jsp"></put-attribute>
+        <put-attribute name="content" value="/WEB-INF/jsp/projectproposal/welfarecost.jsp"></put-attribute>
+ </definition>
+    
+    
+     <definition name="physical" extends="base-def1">
+        <put-attribute name="left" value="/WEB-INF/jsp/common/leftMenu.jsp"></put-attribute>
+        <put-attribute name="content" value="/WEB-INF/jsp/projectproposal/physicaltarget.jsp"></put-attribute>
+ </definition>
+    
+       <definition name="outsource" extends="base-def1">
+        <put-attribute name="left" value="/WEB-INF/jsp/common/leftMenu.jsp"></put-attribute>
+        <put-attribute name="content" value="/WEB-INF/jsp/projectproposal/outsourcing.jsp"></put-attribute>
+ </definition>
+    
+    
+    <definition name="login1" extends="base-def1">
+       <put-attribute name="header" value="/WEB-INF/jsp/common/header.jsp"></put-attribute>
+        <put-attribute name="content" value="/WEB-INF/jsp/common/login1.jsp"></put-attribute>
+        <put-attribute name="footer" value="/WEB-INF/jsp/common/footer.jsp"></put-attribute>
+    </definition>
+    
+    <definition name="login1" extends="base-def1">
+       <put-attribute name="header" value="/WEB-INF/jsp/common/header.jsp"></put-attribute>
+        <put-attribute name="content" value="/WEB-INF/jsp/common/login1.jsp"></put-attribute>
+        <put-attribute name="footer" value="/WEB-INF/jsp/common/footer.jsp"></put-attribute>
+    </definition>
+    
+    
+    <definition name="login1" extends="base-def1">
+       <put-attribute name="header" value="/WEB-INF/jsp/common/header.jsp"></put-attribute>
+        <put-attribute name="content" value="/WEB-INF/jsp/common/login1.jsp"></put-attribute>
+        <put-attribute name="footer" value="/WEB-INF/jsp/common/footer.jsp"></put-attribute>
+    </definition>
+     
+    
+    
+    
+    
+    
+    
+   
+    
+                         
+                      
+</tiles-definitions>
+
+

@@ -1,0 +1,18 @@
+package com.nic.crudbhudhar.service;
+
+import java.util.List;
+
+import common.LandDetailsBean;
+import common.LandListDetails;
+
+public interface SaveBhudharService {
+	
+	
+	
+	public List<LandDetailsBean> saveBhudharDetails(List<LandDetailsBean> listDetail);
+	
+	public List<LandListDetails> retriveBhudharDetails();
+
+
+
+}

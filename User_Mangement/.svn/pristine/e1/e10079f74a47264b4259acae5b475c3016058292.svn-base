@@ -1,0 +1,9 @@
+package com.nic.projectproposal.dao;
+
+import org.springframework.stereotype.Repository;
+
+import com.nic.projectproposal.model.PpGeneralDetails;
+@Repository
+public class ProjectProposalGeneralDAOImpl extends GenericDaoImpl<PpGeneralDetails, Integer> {
+
+}

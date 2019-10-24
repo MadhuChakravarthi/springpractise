@@ -1,0 +1,61 @@
+package com.nic.projectproposal.dao;
+
+
+
+import javax.sql.DataSource;
+
+import org.springframework.orm.hibernate3.HibernateTemplate;
+
+import com.nic.projectproposal.model.PpGeneralDetails;
+
+
+
+public class ProjectProposalDAOImpl implements ProjectProposalDAO {
+
+
+	
+    private HibernateTemplate hibernateTemplate;
+	
+    private DataSource dataSource; 
+    
+	
+	public void setDataSource(DataSource dataSource) {
+		this.dataSource = dataSource;
+	}
+
+
+	public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
+		this.hibernateTemplate = hibernateTemplate;
+	
+	}
+
+
+	@Override
+	public void generalCreation(PpGeneralDetails user) {
+		hibernateTemplate.save(user);
+		
+	}
+
+	
+
+	/*public void saveStudent(StudentRegistration student) {
+		
+		
+		hibernateTemplate.save(student);
+
+		
+	}*/
+
+
+
+
+
+	
+
+
+	
+
+
+
+
+}

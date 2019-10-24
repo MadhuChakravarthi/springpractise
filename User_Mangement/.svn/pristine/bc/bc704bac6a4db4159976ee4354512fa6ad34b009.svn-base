@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+    
+ 
+    <definition name="login1" extends="base-def1">
+       <put-attribute name="header" value="/WEB-INF/jsp/common/header.jsp"></put-attribute>
+        <put-attribute name="content" value="/WEB-INF/jsp/common/login1.jsp"></put-attribute>
+        <put-attribute name="footer" value="/WEB-INF/jsp/common/footer.jsp"></put-attribute>
+       
+    </definition>
+    
+    
+    <definition name="userEntry" extends="base-def1">
+       <put-attribute name="header" value="/WEB-INF/jsp/common/header.jsp"></put-attribute>
+        <put-attribute name="content" value="/WEB-INF/jsp/common/userEntry.jsp"></put-attribute>
+        <put-attribute name="footer" value="/WEB-INF/jsp/common/footer.jsp"></put-attribute>
+     </definition>
+    
+     <definition name="dashboard" extends="base-def1">
+       <put-attribute name="header" value="/WEB-INF/jsp/common/header_1.jsp"></put-attribute>
+        <put-attribute name="left" value="/WEB-INF/jsp/common/leftMenu.jsp"></put-attribute>
+        <put-attribute name="content" value="/WEB-INF/jsp/common/home.jsp"></put-attribute>
+     </definition>
+    
+    
+    <definition name="student" extends="base-def1">
+        <put-attribute name="left" value="/WEB-INF/jsp/common/leftMenu.jsp"></put-attribute>
+        <put-attribute name="content" value="/WEB-INF/jsp/student/registration1.jsp"></put-attribute>
+     </definition>
+
+
+	<definition name="bhudhar" extends="base-def1">
+        <put-attribute name="left" value="/WEB-INF/jsp/common/leftMenu.jsp"></put-attribute>
+        <put-attribute name="content" value="/WEB-INF/jsp/bhudhar/bhudhar.jsp"></put-attribute>
+    </definition>
+	
+	
+	<definition name="success" extends="base-def1">
+        <put-attribute name="left" value="/WEB-INF/jsp/common/leftMenu.jsp"></put-attribute>
+        <put-attribute name="content" value="/WEB-INF/jsp/bhudhar/success.jsp"></put-attribute>
+    </definition>
+    
+    <!-- <definition name="serverouterror" extends="base-def2">
+        <put name="header" value="/jsp/common/header.jsp"></put>
+        <put name="content" value="/jsp/common/serverSideError.jsp"></put>
+        <put name="footer" value="/jsp/common/footer.jsp"></put>
+    </definition>
+    <definition name="serverlogouterror" extends="base-def2">
+        <put name="header" value="/jsp/common/header.jsp"></put>
+        <put name="content" value="/jsp/common/serverSideLoginError.jsp"></put>
+        <put name="footer" value="/jsp/common/footer.jsp"></put>
+    </definition>
+    <definition name="servererror" extends="base-def2">
+        <put name="left" value="/jsp/common/leftMenu.jsp"></put>
+        <put name="content" value="/jsp/common/servererror.jsp"></put>
+    </definition>
+    <definition name="dashboard" extends="base-def2">
+        <put name="left" value="/jsp/common/leftMenu.jsp"></put>
+        <put name="content" value="/jsp/common/home.jsp"></put>
+    </definition>
+    <definition name="changepassword" extends="base-def2">
+        <put name="left" value="/jsp/common/leftMenu.jsp"></put>
+        <put name="content" value="/jsp/common/changePassword.jsp"></put>
+    </definition>
+	
+    
+    
+    <definition name="failure" extends="base-def2">
+        <put name="left" value="/jsp/common/leftMenu.jsp"></put>
+        <put name="content" value="/jsp/common/failure.jsp"></put>
+    </definition>
+    
+    
+    <definition name="course_searchpage" extends="base-def2">
+        <put name="left" value="/jsp/common/leftMenu.jsp"></put>
+        <put name="content" value="/jsp/reports/coursewise_reportsearchpage.jsp"></put>
+    </definition>
+    <definition name="course_student_searchpage" extends="base-def2">
+        <put name="left" value="/jsp/common/leftMenu.jsp"></put>
+        <put name="content" value="/jsp/reports/coursestudent_reportsearchpage.jsp"></put>
+    </definition>
+    
+    
+    <definition name="statereport_search" extends="base-def2">
+        <put name="left" value="/jsp/common/leftMenu.jsp"></put>
+        <put name="content" value="/jsp/reports/state_registrations_search.jsp"></put>
+    </definition>
+    
+    <definition name="statereportall" extends="base-def2">
+        <put name="left" value="/jsp/common/leftMenu.jsp"></put>
+        <put name="content" value="/jsp/reports/statereportall.jsp"></put>
+    </definition>
+ -->                                                              
+                      
+</tiles-definitions>
+
+

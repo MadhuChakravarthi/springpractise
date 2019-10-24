@@ -1,0 +1,88 @@
+package com.nic.projectproposal.controller;
+import java.util.List;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import com.nic.projectproposal.dao.CategoryDAO;
+import com.nic.projectproposal.model.PpCategoryDetails;
+
+
+
+@Controller
+public class CategoryController   {
+	
+	
+	@RequestMapping("/categoryInt")
+	public String categoryInterfaceTest(Model model)
+	{
+		
+        PpCategoryDetails category=new PpCategoryDetails();
+        model.addAttribute("category",category);
+	 	return "category";
+	}
+	
+	
+	@RequestMapping(value="/categoryEntryTest",method=RequestMethod.POST)
+	public String categoryInsertionTest(@Valid @ModelAttribute("category") PpCategoryDetails category,BindingResult result,Model model,HttpServletRequest request)
+	{
+		 HttpSession session=request.getSession();
+	     if(result.hasErrors())
+		{
+	    	 
+	    	 
+			 model.addAttribute("category",category);
+			  
+			return "category";
+		}
+		
+		else  {
+	  
+			
+		if(category.getPpCategoryId()==0)	
+		{	
+	   	
+	    category.setProject_proposal_id((Integer)session.getAttribute("projectproposalcode"));
+	    int project_category_code=categoryTest.add(category);
+	    List<PpCategoryDetails> listGeneral1= categoryTest.getAll();        
+	    model.addAttribute("list",listGeneral1);
+	   	model.addAttribute("message","Successfully User Created");	
+	    model.addAttribute("category",category);
+	
+		}
+		else
+		{
+			
+			//System.out.println("ELSE"+project.getProjectProposalId());
+			categoryTest.update(category); 
+	    	model.addAttribute("message","Successfully Updated");	
+	    	List<PpCategoryDetails> listGeneral= categoryTest.getAll();        
+		    model.addAttribute("list",listGeneral);
+	       
+		}
+		
+	     return "category";
+		
+		}
+		}
+	
+	
+	@RequestMapping(value="/editCategoryRetrival/{id}")  
+    public String edit(@PathVariable int id,Model model){ 
+	    PpCategoryDetails category=categoryTest.find(id);
+	    model.addAttribute("category", category);
+        return "category";  
+    }  
+	
+
+
+	@Autowired(required=true)
+	private  CategoryDAO categoryTest;
+}

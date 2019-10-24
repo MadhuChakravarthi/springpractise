@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+ 
+<hibernate-configuration>
+    <session-factory>
+        
+         <mapping class="com.nic.usermanagement.model.Roles" />
+         <mapping class="com.nic.usermanagement.model.District" />
+         <mapping class="com.nic.usermanagement.model.Users" />
+         <mapping class="com.nic.usermanagement.model.StudentRegistration" />
+         <mapping class="com.nic.usermanagement.model.BhudharRegistration" />
+         <mapping class="com.nic.usermanagement.model.CategoryBean" />
+         <mapping class="com.nic.usermanagement.model.PublicationBean" />
+         <mapping class="com.nic.projectproposal.model.PpGeneralDetails" />
+         <mapping class="com.nic.projectproposal.model.PpCategoryDetails" />
+         <mapping class="com.nic.projectproposal.model.PpWelfareCost" />
+         <mapping class="com.nic.projectproposal.model.PpOutsourcingOfTheProjectActivities" />
+         <mapping class="com.nic.projectproposal.model.PhysicalTarget" />
+         <mapping class="com.nic.projectproposal.model.PhysicalTargetTrngwiseTargets" />  
+    </session-factory>
+</hibernate-configuration>

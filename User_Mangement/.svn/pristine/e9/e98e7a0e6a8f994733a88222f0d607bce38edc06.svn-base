@@ -1,0 +1,81 @@
+package com.nic.usermanagement.dao;
+
+import java.util.List;
+import java.util.Map;
+
+import org.apache.commons.logging.impl.LogKitLogger;
+import org.springframework.orm.hibernate3.HibernateTemplate;
+
+import com.nic.usermanagement.model.BhudharRegistration;
+import com.nic.usermanagement.utils.Constants;
+import com.nic.usermanagement.utils.DBUtils;
+
+public class BhudharDAOImpl implements BhudharDAO {
+	
+
+	 private HibernateTemplate hibernateTemplate;
+
+	
+	public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
+		this.hibernateTemplate = hibernateTemplate;
+	}
+
+
+/*	@Override
+	public void saveBhudharDetails(BhudharRegistration bhurdetail) {
+	    hibernateTemplate.save(bhurdetail); 
+	}
+*/
+
+	@Override
+	public BhudharRegistration bhudharRegistration(BhudharRegistration bhurdetails) {
+		
+			
+			hibernateTemplate.save(bhurdetails);
+			System.out.println( bhurdetails.getBhudharId() );
+			
+		    return bhurdetails;
+
+	}
+	@Override
+	public BhudharRegistration bhudharDetailsById(Integer bhudharid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	
+
+
+	@Override
+	public BhudharRegistration BhudharDetailsById(Integer bhudharid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+/*	public BhudharRegistration BhudharDetailsById(Integer bhudharid){
+		System.out.println(bhudharid);
+		
+		List<BhudharRegistration> bhudharDetails = hibernateTemplate.find("from BhudharRegistration where bhudharid=?",bhudharid);
+	if(bhudharDetails.isEmpty()){
+		System.out.println(bhudharDetails);
+		return null;
+	}
+		else{
+			System.out.println(bhudharDetails);
+			return bhudharDetails.get(0);
+		}
+*/
+		
+	}
+
+	
+	
+	
+
+
+
+
+	
+

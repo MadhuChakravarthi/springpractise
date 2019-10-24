@@ -1,0 +1,21 @@
+package com.nic.usermanagement.service;
+import java.util.List;
+import java.util.Map;
+import javax.servlet.http.HttpSession;
+import com.nic.usermanagement.model.Roles;
+import com.nic.usermanagement.model.StudentRegistration;
+import com.nic.usermanagement.model.Users;
+
+public interface UserService {
+
+	public boolean userLoginAuthentication(HttpSession session,Map requestMAp);
+	public int userCreation();
+	public void logout();
+	public int resetPassword();
+	public int changePassword();
+	public void saveStudent(StudentRegistration student);
+	public void userCreation(Users user);
+	public List<Roles> getRoles();
+	
+	
+}
