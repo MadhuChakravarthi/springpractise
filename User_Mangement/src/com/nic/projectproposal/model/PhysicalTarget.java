@@ -46,7 +46,7 @@ public class PhysicalTarget implements java.io.Serializable {
 
 	
 	private List<PhysicalTargetTrngwiseTargets> physicalTargetTrngwiseTargets;
-	@OneToMany
+	@OneToMany(cascade = {CascadeType.ALL})
 	@JoinColumn(name="physicaltarget_id")
 	public List<PhysicalTargetTrngwiseTargets> getPhysicalTargetTrngwiseTargets() {
 		return physicalTargetTrngwiseTargets;
