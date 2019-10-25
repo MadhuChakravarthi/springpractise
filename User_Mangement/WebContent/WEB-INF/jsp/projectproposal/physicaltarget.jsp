@@ -28,7 +28,7 @@ $(document).ready(function(){
         var target=$("#target").val();
         var markup = "<tr><td><input type='checkbox' name='record'></td><td>" + statecode + "<input type=text name=physicalTargetTrngwiseTargets["+rest+"].statecode value="+$("#statecode").val()+"></input></td><td>" + distcode + "<input type=text name=physicalTargetTrngwiseTargets["+rest+"].distcode value="+$("#distcode").val()+"></input></td><td>" + target + "<input type=text name=physicalTargetTrngwiseTargets["+rest+"].target value="+$("#target").val()+"></input></td></tr>";
        
-        
+        //TEST
  
         
          // alert(dynaValue);
